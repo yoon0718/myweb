@@ -1,0 +1,136 @@
+<!doctype html> 
+<html>
+<head>
+    <title>web - welcome</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        .js{
+            font-weight: bold;
+            color: red;
+        }
+        #first{
+            color:green;
+        }
+        span{
+            color:blue;
+        }
+        #box1{
+            text-align:center;
+            font-size: 40px;
+            font-weight: 500;
+            background-color: yellow;
+            margin-left: 500px;
+            margin-right: 500px; 
+        }
+    </style>
+    <script>
+        function nightDayHandler(self){
+            var target = document.querySelector('body');
+            if(self.value === 'night'){
+            target.style.backgroundColor='black'
+            target.style.color='white';
+            self.value = 'day';
+            document.querySelector('p').style.color = 'red';
+            var alist = document.querySelectorAll('a');
+            var i = 0
+            while( i < alist.length){
+                alist[i].style.color = 'white';
+                i = i + 1;
+            }
+            document.querySelector('h1').style.backgroundColor = 'gray';
+            document.querySelector("h1").style.borderBottomColor = "gray";
+            document.querySelector("ol").style.borderColor = "gray";
+            document.getElementById("box1").style.backgroundColor = "gray";
+            }   
+            else{
+            target.style.backgroundColor='burlywood';
+            target.style.color='black';
+            self.value = 'night';
+            document.querySelector('p').style.color = 'black';
+            var alist = document.querySelectorAll('a');
+            var i = 0
+            while( i < alist.length){
+                alist[i].style.color = 'blue';
+                i = i + 1;
+            }
+            document.querySelector('h1').style.backgroundColor = 'rgb(219, 131, 16)';
+            document.querySelector("h1").style.borderBottomColor = "rgb(219, 131, 16)";
+            document.querySelector("ol").style.borderColor = "rgb(219, 131, 16)";
+            document.getElementById("box1").style.backgroundColor = "yellow";
+            }
+        }
+        </script>
+</head> 
+<body>
+
+    <link rel="stylesheet" href="webstyle.css">
+    
+    <h1 style= "background-color:rgb(219, 131, 16)" ><a href="WEB.html" style=" color:blue;"  >WEB</a></h1>
+    <div id="grid">
+        <div id = "move">
+            <ol>
+                <br>
+                <li><a href="web_Introduction.html"  title="소개글">Introduction</a></li><br><br>
+                <li><a href="web_HTML.html" title="HTML Introduce">HTML</a></li><br><br>
+                <li><a href="web_CSS.html" title="CSS Introduce">CSS</a></li><br><br>
+                <li><a href="web_JAVASCRIPT.html"  title="JAVASCRIPT Introduce">JAVASCRIPT</a></li><br><br><br>
+                
+            </ol>
+            <br>
+                웹의 컬러를 바꾸고 싶다면 이것을 눌러주세요->
+                <input type="button" value="night" onclick="
+                 nightDayHandler(this);
+                 "><br><a style= "background-color:yellow;">made by yoon</a><br><br><br><br><br>
+            
+        </div>
+        
+        <div id = "move1">
+            <p id="box1">WEB이란 무엇인가?</p>
+            <img src="web.jpg" width="17%" align="left"> <!--이미지 불러오기-->
+            <font size="35px">WEB이란?</font><br>
+            월드 와이드 웹(World Wide Web)이란 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간을 의미합니다.
+            간단히 줄여서 WWW나 W3라고도 부르며, 간단히 웹(Web)이라고 가장 많이 불립니다.
+            인터넷과 같은 의미로 많이 사용되고 있지만, 정확히 말해 웹은 인터넷상의 인기 있는 하나의 서비스일 뿐입니다.
+            하지만 현재에는 인터넷과 웹이라는 단어가 서로 혼용되어 사용될 만큼 인터넷의 가장 큰 부분을 차지하고 있습니다.
+            웹에서는 HTML 언어를 사용하여 작성된 하이퍼텍스트 문서를 웹 페이지(web page)라고 부릅니다.
+            이러한 웹 페이지들 중에서 서로 관련된 내용으로 작성된 웹 페이지들의 집합을 웹 사이트(web site)라고 합니다.
+            웹은 이렇게 작성된 수많은 웹 페이지들이 하이퍼링크(hyperlink)를 통해 서로 연결되어 구성됩니다.
+            사용자가 웹 페이지에 포함된 하이퍼링크를 따라 다른 웹 페이지들로 계속하여 이동하는 것을 웹 서핑(web surfing)이라고 부르며, 
+            이때 사용자가 웹 페이지를  검색하기 위해 사용하는 프로그램을 웹 브라우저(web browser)라고 합니다.
+            <p></p style="margin-top:100px;"> <!--이것은 엔터느낌인데 픽셀단위로 띄워줄수 있음-->
+            
+            <br>
+            <p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tZooW6PritE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p> <!--동영상집어넣기-->
+            <div id="disqus_thread"></div>
+    <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://web1-2.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+    
+        </div>
+    </div>
+    
+    
+</body> <!--직접표시되는 곳은 body로 묶음-->
+</html> <!--이 전체를 html로 묶음-->

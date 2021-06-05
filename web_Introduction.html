@@ -1,0 +1,130 @@
+<!doctype html> 
+<html>
+<head>
+    <title>web - Introduction</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        .js{
+            font-weight: bold;
+            color: red;
+        }
+        #first{
+            color:green;
+        }
+        span{
+            color:blue;
+        }
+        #box1{
+            text-align:center;
+            font-size: 40px;
+            font-weight: 500;
+            background-color: yellow;
+            margin-left: 500px;
+            margin-right: 500px;
+            
+            
+        }
+    </style>
+    <script>
+        function nightDayHandler(self){
+            var target = document.querySelector('body');
+            if(self.value === 'night'){
+            target.style.backgroundColor='black'
+            target.style.color='white';
+            self.value = 'day';
+            document.querySelector('p').style.color = 'red';
+            var alist = document.querySelectorAll('a');
+            var i = 0
+            while( i < alist.length){
+                alist[i].style.color = 'white';
+                i = i + 1;
+            }
+            document.querySelector('h1').style.backgroundColor = 'gray';
+            document.querySelector("h1").style.borderBottomColor = "gray";
+            document.querySelector("ol").style.borderColor = "gray";
+            document.getElementById("box1").style.backgroundColor = "gray";
+            }   
+            else{
+            target.style.backgroundColor='burlywood';
+            target.style.color='black';
+            self.value = 'night';
+            document.querySelector('p').style.color = 'black';
+            var alist = document.querySelectorAll('a');
+            var i = 0
+            while( i < alist.length){
+                alist[i].style.color = 'blue';
+                i = i + 1;
+            }
+            document.querySelector('h1').style.backgroundColor = 'rgb(219, 131, 16)';
+            document.querySelector("h1").style.borderBottomColor = "rgb(219, 131, 16)";
+            document.querySelector("ol").style.borderColor = "rgb(219, 131, 16)";
+            document.getElementById("box1").style.backgroundColor = "yellow";
+            }
+        }
+        </script>
+</head> 
+<body>
+
+    <link rel="stylesheet" href="webstyle.css">
+    
+    <h1 style= "background-color:rgb(219, 131, 16);" ><a href="WEB.html" style=" color:blue;"  >WEB</a></h1>
+    <div id="grid">
+        <div id = "move">
+            <ol>
+                <br>
+                <li><a href="web_Introduction.html"  title="소개글">Introduction</a></li><br><br>
+                <li><a href="web_HTML.html" title="HTML Introduce">HTML</a></li><br><br>
+                <li><a href="web_CSS.html" title="CSS Introduce">CSS</a></li><br><br>
+                <li><a href="web_JAVASCRIPT.html"  title="JAVASCRIPT Introduce">JAVASCRIPT</a></li><br><br><br>
+                
+            </ol>
+            <br>
+                웹의 컬러를 바꾸고 싶다면 이것을 눌러주세요->
+                <input type="button" value="night" onclick="
+                 nightDayHandler(this);
+                 "><br><a style= "background-color:yellow;">made by yoon</a><br><br><br><br><br>
+            
+        </div>
+        
+        <div id = "move1">
+            <p id="box1">Introduction</p>
+            <img src="web.jpg" width="10%" align="left"> <!--이미지 불러오기-->
+            <font size="5px">안녕하세요. 군산대학교 수학과에서 컴퓨터정보공학과로 복수전공을 하고 있는 4학년 <strong><u>윤여록</u></strong>이라고 
+                합니다. 현재 web을 공부하고 있고 바로 보여지는 UI에 재미를 느껴 열심히 하고 있습니다.
+                이 웹페이지는 제가 한학기 동안 공부한 <span id="first">HTML</span>, <span class="js">CSS</span>, <span>JAVASCRIPT</span>의 모든 것이 담겨있는 웹입니다. 재미있게 봐주시기 바랍니다. 감사합니다.</font>
+            <p></p style="margin-top:100px;"> <!--이것은 엔터느낌인데 픽셀단위로 띄워줄수 있음-->
+            <br><br><br>
+            
+            <p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1ttLx9MbrCI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p> <!--동영상집어넣기-->
+            <div id="disqus_thread"></div>
+    <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://web1-2.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+    
+        </div>
+    </div>
+    
+    
+</body> <!--직접표시되는 곳은 body로 묶음-->
+</html> <!--이 전체를 html로 묶음-->
